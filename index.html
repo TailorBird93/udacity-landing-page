@@ -64,14 +64,14 @@
           Build your next consultancy website within few minutes!</p>
     </div>    
     <div class="landing__container">
-      <form action="./" method="post">
+      <form action="./" method="post" id="subscribtionForm">
         
         <div class="formLeft">
             <label for="firstName"> Your first name:</label>
-            <input type="text" name="firstName" placeholder="Name" required/> <br/>
+            <input type="text" id="FirstName" name="firstName" placeholder="Name" required/> <br/>
 
             <label for="surname"> Your Surname:</label>
-            <input type="text" name="surname" placeholder="Surname" required/> <br/>
+            <input type="text" id="Surname" name="surname" placeholder="Surname" required/> <br/>
               
 
             <label for="subject"> Subject: </label>
@@ -87,16 +87,16 @@
 
         <div class="formRight">
               <label for="email"> E-mail: </label>
-              <input type="email" name="email" placeholder="example@email.com" required/> <br/>
+              <input type="email" id="emailAddress" name="email" placeholder="example@email.com" required/> <br/>
 
               <label for="contact number">Contact Number: </label>
-              <input type="tel" name="contact number" pattern="[0-9]{5}-[0-9]{6}" placeholder="12345-567890"required/> <br/>
+              <input type="tel" id="phoneNumber" name="contact number" pattern="[0-9]{5}-[0-9]{6}" placeholder="12345-567890"required/> <br/>
               
               <label for="message">Message:</label>
               <textarea id="customerMessage" type="text" name="message" placeholder="Your message here." required></textarea> <br/>
               
 
-              <input type="submit" id="submit" name="submit" value="Subscribe"/>
+              <input type="submit" onclick=isFormValid() id="submit" name="submit" value="Subscribe"/>
         </div>
 
       </form>

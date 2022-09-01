@@ -22,7 +22,7 @@
  * Define Global Variables
  * 
 */
-s
+
 
 
 /**
@@ -60,5 +60,19 @@ s
 
 // Set sections as active
 
+function isFormValid(){
+    if(FirstName.checkValidity()==true
+    && Surname.checkValidity()==true 
+    && subjects.checkValidity()==true 
+    && emailAddress.checkValidity()==true
+    && phoneNumber.checkValidity()==true
+    && customerMessage.checkValidity()==true) {
+        alert('Form Submitted Correctly!')
+    }  else {
+        alert('Please, fill out the form correctly')
+    }
+}
 
-console.log('test');
+//function clicked(event) {
+   // alert('Form submitted, thank you.')
+//}

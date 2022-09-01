@@ -56,25 +56,27 @@
     </section>
   </main>
 
-  <section class="formStart">
-    <h3>Subscribe to our newsletter to get updated.</h1>
-    <p>Get our latest update in your inbox. 
-       With lots of unique blocks, you can easily build a page without coding.
-       Build your next consultancy website within few minutes!</p>
-  
-
+  <section id="section4" data-nav="Section 4">
+    <div class="landing__container">
+      <h2>Subscribe to our newsletter!</h2>
+      <p>Get our latest update in your inbox. </p>
+      <p> With lots of unique blocks, you can easily build a page without coding.<br>
+          Build your next consultancy website within few minutes!</p>
+    </div>    
+    <div class="landing__container">
       <form action="./" method="post">
         
         <div class="formLeft">
             <label for="firstName"> Your first name:</label>
-            <input type="text" name="firstName" required/> <br/>
+            <input type="text" name="firstName" placeholder="Name" required/> <br/>
 
             <label for="surname"> Your Surname:</label>
-            <input type="text" name="surname" required/> <br/>
+            <input type="text" name="surname" placeholder="Surname" required/> <br/>
               
 
             <label for="subject"> Subject: </label>
-            <select id="subjects" name="subject" >
+            <select id="subjects" name="subject">
+              <option value="" disabled selected>Choose subject</option>
               <option value="volvo">Product Issue</option>
               <option value="saab">Customer Complaint</option>
               <option value="fiat">Product Question</option>
@@ -85,19 +87,20 @@
 
         <div class="formRight">
               <label for="email"> E-mail: </label>
-              <input type="email" name="email" required/> <br/>
+              <input type="email" name="email" placeholder="example@email.com" required/> <br/>
 
               <label for="contact number">Contact Number: </label>
               <input type="tel" name="contact number" pattern="[0-9]{5}-[0-9]{6}" placeholder="12345-567890"required/> <br/>
               
               <label for="message">Message:</label>
-              <textarea type="text" name="message" required/></textarea> <br/>
+              <textarea id="customerMessage" type="text" name="message" placeholder="Your message here." required></textarea> <br/>
               
 
-              <input type="submit" id="submit" name="submit" value="Send"/>
+              <input type="submit" id="submit" name="submit" value="Subscribe"/>
         </div>
 
       </form>
+    </div>  
   </section>
   <footer class="page__footer">
     <p>&copy Udacity</p>

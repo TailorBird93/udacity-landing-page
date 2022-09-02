@@ -65,13 +65,18 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
-    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
     margin: 0;
-    text-align: right;
+    height:80px;
+    color: rgb(0,13,60,1);
 }
 
 .navbar__menu li {
     display: inline-block;
+    
 }
 
 .navbar__menu .menu__link {

@@ -22,14 +22,41 @@
  * Define Global Variables
  * 
 */
-
+const navbar = document.querySelector('#navbar__list');
+const selection=document.querySelectorAll('.landing__container h2');
+console.log('selection', selection);
+const sections=Array.from(selection);
+console.log('sections', sections);
 
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
-*/
+*/ 
+function isFormValid() {
+    if(FirstName.checkValidity()==true
+    && Surname.checkValidity()==true 
+    && subjects.checkValidity()==true 
+    && emailAddress.checkValidity()==true
+    && phoneNumber.checkValidity()==true
+    && customerMessage.checkValidity()==true) {
+        alert('Form Submitted Correctly!')
+    }  else {
+        alert('Please, fill out the form correctly.')
+    }
+}
+
+// Makes sure the navbar is created upon DOM load
+document.addEventListener('DOMContentLoaded', makeNav);
+
+function makeNav(){
+    sections.forEach(function(sections){
+        const newListElement=document.createElement('li');
+        newListElement.textContent=sections.textContent;
+        navbar.appendChild(newListElement);
+    });
+};
 
 
 
@@ -38,8 +65,12 @@
  * Begin Main Functions
  * 
 */
-
+ 
 // build the nav
+
+
+
+    
 
 
 // Add class 'active' to section when near top of viewport
@@ -59,20 +90,3 @@
 // Scroll to section on link click
 
 // Set sections as active
-
-function isFormValid(){
-    if(FirstName.checkValidity()==true
-    && Surname.checkValidity()==true 
-    && subjects.checkValidity()==true 
-    && emailAddress.checkValidity()==true
-    && phoneNumber.checkValidity()==true
-    && customerMessage.checkValidity()==true) {
-        alert('Form Submitted Correctly!')
-    }  else {
-        alert('Please, fill out the form correctly')
-    }
-}
-
-//function clicked(event) {
-   // alert('Form submitted, thank you.')
-//}

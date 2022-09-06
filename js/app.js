@@ -24,9 +24,7 @@
 */
 const navbar = document.querySelector('#navbar__list');
 const selection=document.querySelectorAll('.landing__container h2');
-console.log('selection', selection);
-const sections=Array.from(selection);
-console.log('sections', sections);
+const sections=Array.from(selection)
 
 
 /**
@@ -50,13 +48,6 @@ function isFormValid() {
 // Makes sure the navbar is created upon DOM load
 document.addEventListener('DOMContentLoaded', makeNav);
 
-function makeNav(){
-    sections.forEach(function(sections){
-        const newListElement=document.createElement('li');
-        newListElement.textContent=sections.textContent;
-        navbar.appendChild(newListElement);
-    });
-};
 
 
 
@@ -67,7 +58,16 @@ function makeNav(){
 */
  
 // build the nav
-
+let navNum=0
+function makeNav(){
+    sections.forEach(function(sections){
+        navNum+=1
+        const newListElement=document.createElement('a');
+        newListElement.textContent=sections.textContent;
+        newListElement.setAttribute('href','#section'+navNum);
+        navbar.appendChild(newListElement);
+    });
+};
 
 
     

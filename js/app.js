@@ -30,21 +30,18 @@ const mainSectionsFirst=document.querySelectorAll('section')
 const mainSections=Array.from(mainSectionsFirst)
 console.log(mainSections)
 
-mainSections.forEach(function(mainSections){
-    window.addEventListener('scroll', function(){
-        if(mainSections.getBoundingClientRect().top < window.innerHeight) {
-            mainSections.classList.add('your-active-class');
-        } else if(mainSections.getBoundingClientRect().top > window.innerHeight){
-            mainSections.classList.remove('your-active-class')
-        }
-    })
-})
+
+
+
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */ 
+
+// Helper function to check if all the form inputs have been filled correctly + alert a correct response for the user
+
 function isFormValid() {
     if(FirstName.checkValidity()==true
     && Surname.checkValidity()==true 
@@ -76,6 +73,7 @@ function makeNav(){
         const newListElement=document.createElement('a');
         newListElement.textContent=sections.textContent;
         navbar.appendChild(newListElement);
+// Scroll to anchor ID using scrollTO event        
         newListElement.addEventListener('click', function(){
             sections.scrollIntoView({ behavior: 'smooth'});
         })
@@ -88,8 +86,17 @@ function makeNav(){
 
 // Add class 'active' to section when near top of viewport
 
+mainSections.forEach(function(mainSections){
+    window.addEventListener('scroll', function(){
+        if (mainSections.getBoundingClientRect().top <= 169 && mainSections.getBoundingClientRect().bottom >=169) {
+            mainSections.classList.add('your-active-class');
+        } else {
+            mainSections.classList.remove('your-active-class')
+        }
+    })
+})
+ 
 
-// Scroll to anchor ID using scrollTO event
 
 
 /**

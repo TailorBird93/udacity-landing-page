@@ -26,6 +26,19 @@ const navbar = document.querySelector('#navbar__list');
 const selection=document.querySelectorAll('.landing__container h2');
 const sections=Array.from(selection)
 
+const mainSectionsFirst=document.querySelectorAll('section')
+const mainSections=Array.from(mainSectionsFirst)
+console.log(mainSections)
+
+mainSections.forEach(function(mainSections){
+    window.addEventListener('scroll', function(){
+        if(mainSections.getBoundingClientRect().top < window.innerHeight) {
+            mainSections.classList.add('your-active-class');
+        } else if(mainSections.getBoundingClientRect().top > window.innerHeight){
+            mainSections.classList.remove('your-active-class')
+        }
+    })
+})
 
 /**
  * End Global Variables
@@ -58,14 +71,14 @@ document.addEventListener('DOMContentLoaded', makeNav);
 */
  
 // build the nav
-let navNum=0
 function makeNav(){
     sections.forEach(function(sections){
-        navNum+=1
         const newListElement=document.createElement('a');
         newListElement.textContent=sections.textContent;
-        newListElement.setAttribute('href','#section'+navNum);
         navbar.appendChild(newListElement);
+        newListElement.addEventListener('click', function(){
+            sections.scrollIntoView({ behavior: 'smooth'});
+        })
     });
 };
 

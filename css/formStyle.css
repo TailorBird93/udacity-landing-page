@@ -56,7 +56,6 @@ input {
     form {
         display: flex;
         flex-direction: column;
-        background-color: red;
     }
 
     .navbar__menu ul {

@@ -28,7 +28,6 @@ const sections=Array.from(selection)
 
 const mainSectionsFirst=document.querySelectorAll('section')
 const mainSections=Array.from(mainSectionsFirst)
-console.log(mainSections)
 
 
 

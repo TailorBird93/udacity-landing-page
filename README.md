@@ -1,13 +1,26 @@
 # Landing Page Project
 
-## Table of Contents
+## General Description
 
-* [Instructions](#instructions)
+This is a finished Landing Page project for the Udacity course.
+It should reflect my understanding of using JS to manipulate the DOM.
 
-## Instructions
+It contains a dynamically created navigation bar, few sections, and a subscription form.
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Software requirements
 
-To get started, open `js/app.js` and start building out the app's functionality
+This webpage is intended to work on any device capable of connecting to the internet.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Installation instructions
+
+This page requires no installation.
+
+## List of files included in the project.
+
+index.html
+styles.css
+app.js
+
+## Copyright and licensing information.
+
+All copyright and licensing belong to Udacity.

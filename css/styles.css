@@ -272,8 +272,14 @@ input {
 
 
 
-
-
+.navActive {  
+    background-color: rgb(0,13,60);
+    color: white;
+    border: 1px solid rgb(17, 14, 63) ;
+    border-radius: 5px;
+    transition: background-color 2s ;
+    padding: 20px;
+}
 
 
 
